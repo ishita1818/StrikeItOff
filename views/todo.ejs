@@ -2,7 +2,9 @@
 <html>
   <head>
     <title>Todo App</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/assets/todo-list.js"></script>
+    <!--script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script-->
     <link rel="stylesheet" href="/assets/styles.css" type="text/css">
   </head>
   <body>
@@ -13,9 +15,9 @@
         <button type="submit">Add Item</button>
       </form>
       <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <% for(var i=0;i< todos.length; i++){ %>
+          <li><%=todos[i].item %></li>
+        <% } %>
       </ul>
     </div>
   </body>
